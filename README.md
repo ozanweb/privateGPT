@@ -1,6 +1,6 @@
 # 🔒 PrivateGPT 📑
 
-> Install & usage docs: https://docs.privategpt.dev/
+> Install & usage docs: https://docs.privategpt.dev/ (OR scroll down to see how, a dummy like me got it working)
 > 
 > Join the community: [Twitter](https://twitter.com/PrivateGPT_AI) & [Discord](https://discord.gg/bK6mRVpErU)
 
@@ -169,3 +169,73 @@ year = {2023}
 ```
 Martínez Toro, I., Gallego Vico, D., & Orgaz, P. (2023). PrivateGPT [Computer software]. https://github.com/imartinez/privateGPT
 ```
+##### Dummy's Installation Guide
+
+Before you start, please note that this process may require patience and a substantial amount of internet data. If you run into any issues, feel free to consult ChatGPT for faster assistance.
+
+- Step 1: Download the Project Files
+Click the "Code" button and choose "Download ZIP."
+Unzip the folder and rename it to "privateGPT," removing the "-main" part.
+Ensure there is no extra folder named within it "privateGPT-main." Move this folder to your Desktop, if it isn't so.
+
+- Step 2: Install Python
+Go to the official Python site and download version 3.11.0.
+During installation, make sure to select the option (if any) to add Python to PATH.
+
+- Step 3: Install Visual Studio 2022
+Visit the Visual Studio 2022 official site.
+Download and install, selecting only "Desktop development with C++."
+
+- Step 4: Install CMake
+Install CMake from its official site.
+Ensure you select the option to add CMake to PATH during installation.
+
+- Step 5: Install GNU Make for Windows (If you are a windows user like me)
+Install GNU Make for Windows.
+Add the installation path to the system environment variables (e.g., C:\Program Files (x86)\GnuWin32\bin).
+
+To do it, just hit the windows button on the keyboard and type environment, then hit enter. In the window click environment variables at bottom rigth corner. Select the Path at the second list below click Edit, then in the new window that just popped up click New and copy paste directory mentioned above and finally click OK to close from all windows.
+
+From now on, we will be working on Windows Command Prompt (CMD)
+
+- Step 6: Working inside CMD
+Press Windows key + R and type cmd and hit enter. This window is called windows command manager.
+
+- Step 7: Navigate to Project Folder
+Navigate to the privateGPT folder on your desktop by entering the command below and hitting ENTER
+cd C:\Users\[***]\Desktop\privateGPT
+(Note that the *** part can be anything, it doesn't matter)
+
+- Step 8: Confirm Python Installation
+Confirm Python installation by entering the command below
+python --version
+You should see "Python 3.11.0." in response
+
+- Step 9: Install Poetry
+Install Poetry with the command below:
+pip install poetry
+Confirm the installation:
+poetry --version
+You should see something like "Poetry (version 1.7.0)" in response.
+
+- Step 10: Install Dependencies
+Install project dependencies with the command below:
+poetry install --with ui,local
+Wait until you see C:\Users\[***]\Desktop\privateGPT> string back again at last.
+
+- Step 11: Download Models
+Enter the command below and hit ENTER again:
+poetry run python scripts/setup
+
+- Step 12: Run Local Server
+Enter one of the following commands and hit ENTER:
+set PGPT_PROFILES=local && make run
+OR
+PGPT_PROFILES=local make run
+Be patient; the process may take some time.
+
+- Step 13: Access the UI
+After completion, visit http://localhost:8001/ in your browser to access the privateGPT UI.
+
+- Step 14: Enjoy!
+Feel free to explore and enjoy using privateGPT!
